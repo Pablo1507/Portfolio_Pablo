@@ -1,13 +1,13 @@
 <template>
-  <v-col style="margin-top: 6%" cols="5" class="ml-10">
-    <div class="d-flex flex-row title text-h5">
-      <p style="color: red">3.</p>
-      <p>&nbspTechnologies</p>
-    </div>
+  <v-row  style="margin-top: 7%">
+    <v-col cols="5" class="ml-10">
+      <div class="d-flex flex-row title text-h5">
+        <p style="color: red">3. </p>
+        <p>&nbspTechnologies</p>
+      </div>
+    </v-col>
 
-  </v-col>
-
-  <v-card class="mx-auto" flat style="background-color:#D7CDBB " max-width="70%">
+  <v-card class="mx-auto mt-10" flat style="background-color:#D7CDBB " max-width="80%">
     <v-row>
       <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
         <v-card :href="card.doc" target="_blank">
@@ -25,6 +25,8 @@
       </v-col>
     </v-row>
   </v-card>
+  </v-row>
+
 </template>
 
 <script>
@@ -33,7 +35,7 @@ export default {
     cards: [
       {
         title: 'Angular',
-        src: 'https://miro.medium.com/v2/resize:fit:1400/1*uGRvXkzzytZ-8YxKaxYEBA.png',
+        src: 'https://wallpapers.com/images/featured/angular-85vhooptaw06gumk.jpg',
         flex: 4,
         doc: "https://angular.io/docs"
       },
@@ -46,7 +48,7 @@ export default {
       },
       {
         title: 'Javascript/Typescript',
-        src: 'https://blog.fellyph.com.br/wp-content/uploads/2014/02/js-symbol.png',
+        src: 'https://miro.medium.com/v2/resize:fit:1358/1*a3BHGbuAMpOaZj6HkTrNqA.png',
         flex: 4,
         doc: "https://developer.mozilla.org/es/docs/Web/JavaScript"
 
@@ -60,21 +62,21 @@ export default {
       },
       {
         title: 'Laravel',
-        src: 'https://s3-eu-west-1.amazonaws.com/bucketeer-688d8e11-8fc6-459f-bb52-26fd21452913/2020/03/AcA2LnWL_400x400.jpg',
+        src: 'https://res.cloudinary.com/practicaldev/image/fetch/s--hRt7NyGl--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tzcyeynbg9c4sfkidgas.jpg',
         flex: 4,
         doc: "https://laravel.com/docs/10.x/readme"
 
       },
       {
         title: 'Symfony',
-        src: 'https://symfony.com/images/opengraph/symfony.png',
+        src: 'https://vabadus.es/images/cache/thumb_listado/images/articulos/63fa32ce14aa4892052295.png',
         flex: 4,
         doc: "https://symfony.com/doc/current/index.html"
 
       },
       {
         title: 'Java',
-        src: 'https://lms.barcelonactiva.cat/img/Logo_Java.jpg',
+        src: 'https://d2rkbgac7j76wa.cloudfront.net/whichversionofjava.jpeg',
         flex: 4,
         doc: "https://docs.oracle.com/en/java/"
 
@@ -88,14 +90,14 @@ export default {
       },
       {
         title: 'CSS',
-        src: 'https://constructs.stampede-design.com/wp-content/uploads/2014/10/css3.jpg',
+        src: 'https://fullstack-dev.netlify.app/desc-images/css3.jpeg',
         flex: 4,
         doc: "https://developer.mozilla.org/es/docs/Web/CSS"
 
       },
       {
         title: 'HTML5',
-        src: 'https://www.anerbarrena.com/wp-content/uploads/2016/04/html5.png',
+        src: 'https://i.pinimg.com/736x/d9/30/0c/d9300c98f4fac3710b304e9bd82fa5de.jpg',
         flex: 4,
         doc: "https://developer.mozilla.org/es/docs/Glossary/HTML5"
 
@@ -130,7 +132,7 @@ export default {
       },
       {
         title: 'Modelo-Vista-Controlador',
-        src: 'https://www.datocms-assets.com/48294/1683007009-mvc-architecture-4-mvc-architecture-diagram.png?auto=format',
+        src: 'https://www.crio.do/blog/content/images/2021/07/MVC-Architecture.png',
         flex: 4,
         doc: "https://developer.mozilla.org/es/docs/Glossary/MVC"
 

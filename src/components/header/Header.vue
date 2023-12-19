@@ -1,46 +1,41 @@
 <template>
   <v-row class="d-flex flex-row justify-lg-space-between title" style="background-color: rgb(0, 97, 127)">
-    <v-col cols="3" class="ml-8">
-<!--      <v-img width="50px" src="https://i.pinimg.com/originals/11/74/21/1174215797dec302c416c52eaac5fc46.png"></v-img>-->
-      <div id="loader" class="loader ">
+    <v-col cols="3" class="ml-8 loader-display">
+      <div id="loader" class="loader">
         <h1 id="codeit"></h1>
       </div>
     </v-col>
     <v-col cols="2" class="align-self-center">
-      <p class="hover-effect tracking-in-expand-forward-top" style="width: 70px; color: #D7CDBB">About me</p>
+      <p class="hover-effect tracking-in-expand-forward-top" style="width: 70px; color: #D7CDBB" @click="goToComponent('aboutme')">About me</p>
     </v-col>
     <v-col cols="2" class="align-self-center">
-      <p class="hover-effect tracking-in-expand-forward-top" style="width: 70px; color: #D7CDBB" >Experience</p>
+      <p class="hover-effect tracking-in-expand-forward-top" style="width: 82px; color: #D7CDBB" @click="goToComponent('experience')" >Experience</p>
     </v-col>
     <v-col cols="2" class="align-self-center">
-      <p class="hover-effect tracking-in-expand-forward-top" style="width: 70px; color: #D7CDBB" >Technologies</p>
+      <p class="hover-effect tracking-in-expand-forward-top" style="width: 96px; color: #D7CDBB" @click="goToComponent('technologies')" >Technologies</p>
     </v-col>
 
     <v-col class="align-self-center">
       <v-row>
         <v-col>
-<!--          <v-btn class="wobble-horizontal-bottom" color="#D7CDBB" variant="plain" icon="mdi-gmail" style="opacity: 1"-->
-<!--                  size="x-large" @click="openGmailDialog">-->
-<!--          </v-btn>-->
-          <v-btn class="wobble-horizontal-bottom" color="#D7CDBB" variant="plain"  icon="mdi-gmail" style="opacity: 1"
-                 href="https://www.gmail.com"
-                 target="_blank" size="x-large">
+          <v-btn class="wobble-horizontal-bottom hover-effect" color="#D7CDBB" variant="plain"  icon="mdi-file-pdf-box" style="opacity: 1"
+                 href="/Pablo_Gutiérrez_CV.pdf"
+                 download
+                 size="x-large">
           </v-btn>
         </v-col>
         <v-col>
-          <v-btn class="wobble-horizontal-bottom" color="#D7CDBB" variant="plain"  icon="mdi-linkedin" style="opacity: 1"
+          <v-btn class="wobble-horizontal-bottom hover-effect" color="#D7CDBB" variant="plain"  icon="mdi-linkedin" style="opacity: 1"
                  href="https://www.linkedin.com/in/pablo-gutiérrez-campos-80bb26232"
                  target="_blank" size="x-large">
           </v-btn>
         </v-col>
         <v-col>
-          <v-btn class="wobble-horizontal-bottom" color="#D7CDBB" variant="plain" icon="mdi-github" style="opacity: 1"
+          <v-btn class="wobble-horizontal-bottom hover-effect" color="#D7CDBB" variant="plain" icon="mdi-github" style="opacity: 1"
                  href="https://github.com/Pablo1507"
                  target="_blank" size="x-large"></v-btn>
         </v-col>
-        <v-dialog v-model="gmailDialog" max-width="600">
-          <FormGmail @closeDialog="closeGmailDialog" />
-        </v-dialog>
+
       </v-row>
     </v-col>
 
@@ -52,6 +47,12 @@ import { ref,onMounted } from 'vue';
 import FormGmail from "@/components/dialogs/FormGmail.vue";
 import TypeIt from "typeit/src/TypeIt";
 
+const emit = defineEmits(['sendGoTo'])
+
+const goToComponent = (type) => {
+
+  emit('sendGoTo', type);
+};
 const gmailDialog = ref(false);
 
 const openGmailDialog = () => {
@@ -95,6 +96,7 @@ onMounted(() => {
 
 .hover-effect:hover {
   cursor: pointer;
+  color: #fff !important;
 }
 
 .title{
@@ -125,4 +127,18 @@ onMounted(() => {
   letter-spacing: -8px;
   vertical-align: middle;
 }
+
+v-col p:hover{
+}
+
+@media (max-width:320px)  {  }
+@media (max-width:481px)  {  }
+@media (max-width:641px)  {  }
+@media (max-width:961px)  {  }
+@media (max-width:1025px) {
+  .loader-display{
+    display: none;
+  }
+}
+@media (max-width:1281px)
 </style>

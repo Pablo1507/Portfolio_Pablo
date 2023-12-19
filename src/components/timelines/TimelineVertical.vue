@@ -1,9 +1,6 @@
 <template>
   <v-timeline side="end" align="start">
-    <v-timeline-item
-        :dot-color="getDotColor('vertice')"
-        size="small"
-    >
+    <v-timeline-item :dot-color="getDotColor('vertice')" size="small">
       <div class="d-flex">
         <div>
           <button @click="sendType('vertice')" :class="{ 'selected': selectedItem === 'vertice' }" id="vertice">
@@ -15,10 +12,7 @@
         </div>
       </div>
     </v-timeline-item>
-    <v-timeline-item
-        :dot-color="getDotColor('dekra')"
-        size="small"
-    >
+    <v-timeline-item :dot-color="getDotColor('dekra')" size="small">
       <div class="d-flex">
         <div>
           <button @click="sendType('dekra')" :class="{ 'selected': selectedItem === 'dekra' }" id="dekra">
@@ -30,10 +24,7 @@
         </div>
       </div>
     </v-timeline-item>
-    <v-timeline-item
-        :dot-color="getDotColor('tfg')"
-        size="small"
-    >
+    <v-timeline-item :dot-color="getDotColor('tfg')" size="small">
       <div class="d-flex">
         <div>
           <button @click="sendType('tfg')" :class="{ 'selected': selectedItem === 'tfg' }" id="tfg">
@@ -49,9 +40,9 @@
 </template>
 
 <script setup>
-import {ref} from 'vue';
+import { ref } from 'vue';
 
-const emit = defineEmits(['sendType'])
+const emit = defineEmits(['sendType']);
 
 const selectedItem = ref('vertice');
 

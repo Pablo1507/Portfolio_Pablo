@@ -4,7 +4,6 @@ import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import { MotionPlugin } from '@vueuse/motion'
-import app from "@/App.vue";
 
 loadFonts()
 
